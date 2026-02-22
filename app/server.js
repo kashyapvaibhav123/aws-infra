@@ -2,7 +2,7 @@ require('dotenv').config();
 
 const express=require('express');
 const app =express();
-const PORT=process.env.PORT ||80;
+const PORT = process.env.PORT || 3000;
 const fs=require('fs');
 const MESSAGE=process.env.MESSAGE || "CLOUD IS RUNNING"
 const LOG_FILE="/var/log/myapp.log";
@@ -17,13 +17,13 @@ app.get('/',(req,res)=>{
 });
 
 app.get('/health',(req,res)=>{
-    logMessage("Health endpoint accessed");
+    logMessage("endpoint accessed");
     res.json({status:"OK"});
 });
 app.listen(80,()=>{
     console.log("Server Start on port 80")
 });
-app.listen(prompt,()=>{
+app.listen(PORT, () => {
     logMessage(`Server started on port ${PORT}`);
     console.log(`Server started on port ${PORT}`);
 });
