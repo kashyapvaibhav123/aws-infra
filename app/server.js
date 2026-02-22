@@ -2,7 +2,7 @@ const express=require('express');
 const app =express();
 
 app.get('/',(req,res)=>{
-    res.send("Cloud App Running");
+    res.send("Updated via CI/CD");
 });
 
 app.get('/health',(req,res)=>{
