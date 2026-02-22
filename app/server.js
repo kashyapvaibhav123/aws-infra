@@ -6,7 +6,7 @@ app.get('/',(req,res)=>{
 });
 
 app.get('/health',(req,res)=>{
-    res.json({status:"OK"});
+    res.json({status:"Ok Health"});
 });
 app.listen(80,()=>{
     console.log("Server Start on port 80")
