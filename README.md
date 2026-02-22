@@ -1,6 +1,6 @@
-# 🚀 AWS Automated Cloud Deployment Project
+#  AWS Automated Cloud Deployment Project
 
-## 📌 Project Overview
+##  Project Overview
 
 This project demonstrates an end-to-end automated cloud deployment using:
 
@@ -15,35 +15,35 @@ The application is deployed on AWS EC2 and automatically updates on every push t
 
 ---
 
-## 🏗 Architecture Diagram
+##  Architecture Diagram
 
 ```
-                👨‍💻 Developer
+                 Developer
                         │
                         ▼
-              📂 GitHub Repository
+               GitHub Repository
                         │
                         ▼
-          ⚙ GitHub Actions (CI/CD)
+           GitHub Actions (CI/CD)
                         │
         ┌───────────────┼───────────────┐
         ▼                               ▼
- 🐳 Build Docker Image          📦 Push Image to Docker Hub
+  Build Docker Image           Push Image to Docker Hub
                                                 │
                                                 ▼
-                                      ☁ AWS EC2 Instance
+                                       AWS EC2 Instance
                                                 │
-                                     ⬇ Pull Latest Image
+                                      Pull Latest Image
                                                 │
-                                   🔁 Restart Docker Container
+                                    Restart Docker Container
                                                 │
                                                 ▼
-                                    🌍 Public IP Access
+                                     Public IP Access
 ```
 
 ---
 
-## 🔍 Architecture Explanation
+##  Architecture Explanation
 
 The deployment architecture follows a fully automated CI/CD workflow:
 
@@ -59,7 +59,7 @@ This ensures zero manual deployment steps.
 
 ---
 
-## 🧰 Tech Stack
+##  Tech Stack
 
 | Category | Tools Used |
 |----------|------------|
@@ -71,8 +71,8 @@ This ensures zero manual deployment steps.
 | Operating System | Ubuntu Linux |
 
 ---
-
-## ☁ Infrastructure Deployment (Terraform)
+## AWS Automated Cloud Deployment Steps
+## 1. Infrastructure Deployment (Terraform)
 
 ### Prerequisites
 
@@ -94,7 +94,7 @@ After apply completes, copy EC2 Public IPv4 Address from AWS Console.
 
 ---
 
-## 🐳 Application Deployment (Docker)
+## 2. Application Deployment (Docker)
 
 ```bash
 docker build -t myapp ./app
@@ -105,7 +105,7 @@ docker push <docker-username>/myapp:latest
 
 ---
 
-## 🔄 CI/CD Pipeline
+## 3. Creating CI/CD Pipeline
 
 Deployment is automatically triggered on:
 
@@ -124,7 +124,7 @@ The workflow:
 
 ---
 
-## 🔐 Security Implementation
+## 4. Security Implementation
 
 - No hardcoded secrets
 - Docker Access Token used
@@ -135,7 +135,7 @@ The workflow:
 
 ---
 
-## 📊 Logging
+## 5. Logging
 
 Application logs stored on EC2:
 
@@ -145,7 +145,7 @@ docker exec -it myapp cat /var/log/myapp.log
 
 ---
 
-## 🌍 Public Access
+## Public Access(Testing)
 
 Application URL:
 
@@ -157,7 +157,7 @@ http://<EC2_PUBLIC_IP>/health
 
 ---
 
-## 💰 Estimated AWS Cost Per Day
+##  Estimated AWS Cost Per Day
 
 | Service | Estimated Cost |
 |----------|----------------|
